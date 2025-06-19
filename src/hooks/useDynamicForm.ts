@@ -26,8 +26,7 @@ export const useDynamicForm = ( formProp: FormSchemaProp ) => {
     setFormData({ ...formData, [field]: value });
   }, []);
   
-  
-  const validateForm = useCallback((): boolean => {
+const validateForm = useCallback((): boolean => {
     let currentFormErrors: Record<string, string> = {};
 
     formProp.fields.forEach((field) => {
